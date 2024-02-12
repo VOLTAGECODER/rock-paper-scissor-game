@@ -27,7 +27,7 @@ const displayResult = (result) => {
 
 const findWinner = (userChoice, computerChoice) => {
     if (userChoice === computerChoice) {
-        return "It's a Tie!!!";
+        return `It's a Tie!!! Your choice: ${userChoice} | Computer's choice: ${computerChoice}`;
     } else if (
         (userChoice === "✊" && computerChoice === "✌") ||
         (userChoice === "✋" && computerChoice === "✊") ||
@@ -38,6 +38,7 @@ const findWinner = (userChoice, computerChoice) => {
         return `You Lose!!! ${computerChoice} beats ${userChoice}`;
     }
 };
+
 
 choices.forEach((button) => {
     button.addEventListener("click", () => {
